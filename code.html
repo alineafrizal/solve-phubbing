@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phree - Break Free from Phubbing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --neutral-100: #f8fafc;
+            --neutral-200: #e2e8f0;
+            --neutral-300: #cbd5e1;
+            --neutral-600: #475569;
+            --neutral-800: #1e293b;
+            --neutral-900: #0f172a;
+            --accent: #8b5cf6;
+            --accent-light: #c4b5fd;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, var(--neutral-100) 0%, var(--neutral-200) 100%);
+            min-height: 100vh;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-neutral-800">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-sm border-b border-neutral-200 fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-neutral-900">Phree</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#problem" class="text-neutral-600 hover:text-neutral-900 transition-colors">Problem</a>
+                    <a href="#solutions" class="text-neutral-600 hover:text-neutral-900 transition-colors">Solutions</a>
+                    <a href="#github" class="text-neutral-600 hover:text-neutral-900 transition-colors">GitHub</a>
+                </div>
+                <button class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-neutral-900">
+                Break Free from 
+                <span class="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Phubbing</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-neutral-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Reclaim your focus and productivity by overcoming phone addiction. Transform your digital habits and strengthen real-world connections.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-neutral-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-neutral-800 transition-colors">
+                    Start Your Journey
+                </button>
+                <button class="border-2 border-neutral-300 text-neutral-700 px-8 py-4 rounded-lg font-semibold hover:border-neutral-400 transition-colors">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">The Hidden Productivity Killer</h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Phubbing (phone snubbing) silently erodes your focus, relationships, and overall productivity without you even noticing.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="feature-card bg-neutral-50 p-8 rounded-xl border border-neutral-200">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Constant Distractions</h3>
+                    <p class="text-neutral-600">Average adults check their phones 96 times daily, fragmenting focus and killing deep work.</p>
+                </div>
+
+                <div class="feature-card bg-neutral-50 p-8 rounded-xl border border-neutral-200">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Damaged Relationships</h3>
+                    <p class="text-neutral-600">46% of people report being phubbed by their partners, leading to relationship dissatisfaction.</p>
+                </div>
+
+                <div class="feature-card bg-neutral-50 p-8 rounded-xl border border-neutral-200">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Reduced Productivity</h3>
+                    <p class="text-neutral-600">It takes 23 minutes to refocus after a single phone interruption, dramatically reducing work output.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://placehold.co/600x400" alt="Professional in an office setting looking frustrated while coworkers are distracted by their phones during a meeting" class="rounded-xl shadow-lg w-full" />
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">The Impact on Workplace Productivity</h3>
+                    <p class="text-neutral-600 mb-6">
+                        Phubbing doesn't just affect personal relationships—it's a serious workplace issue. Employees who are constantly checking their phones experience:
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                            40% decrease in task completion speed
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                            50% increase in errors and mistakes
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                            Reduced creativity and problem-solving ability
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                            Poorer team collaboration and communication
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">Practical Solutions</h2>
+                <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+                    Implement these evidence-based strategies to overcome phubbing and boost your productivity.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm">
+                    <div class="text-4xl font-bold text-purple-600 mb-4">01</div>
+                    <h3 class="text-xl font-semibold mb-4">Digital Detox Periods</h3>
+                    <p class="text-neutral-600 mb-6">Schedule phone-free blocks throughout your day to maintain focus and productivity.</p>
+                    <ul class="text-sm text-neutral-600 space-y-2">
+                        <li>• 90-minute focused work sessions</li>
+                        <li>• No-phone meal times</li>
+                        <li>• Device-free first hour after waking</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600 mb-4">02</div>
+                    <h3 class="text-xl font-semibold mb-4">Mindful Notifications</h3>
+                    <p class="text-neutral-600 mb-6">Curate your notifications to eliminate distractions and preserve mental space.</p>
+                    <ul class="text-sm text-neutral-600 space-y-2">
+                        <li>• Turn off non-essential alerts</li>
+                        <li>• Schedule notification batches</li>
+                        <li>• Use focus modes during work hours</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl border border-neutral-200 shadow-sm">
+                    <div class="text-4xl font-bold text-green-600 mb-4">03</div>
+                    <h3 class="text-xl font-semibold mb-4">Physical Boundaries</h3>
+                    <p class="text-neutral-600 mb-6">Create physical separation from your phone to reduce temptation and build better habits.</p>
+                    <ul class="text-sm text-neutral-600 space-y-2">
+                        <li>• Phone-free zones in home/office</li>
+                        <li>• Charging station away from bed</li>
+                        <li>• Use a traditional alarm clock</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-white rounded-xl p-8 border border-neutral-200">
+                <h3 class="text-2xl font-bold mb-6 text-center">Productivity Boost Calculator</h3>
+                <div class="max-w-md mx-auto">
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-neutral-700 mb-2">Current daily phone usage (hours):</label>
+                        <input type="range" min="1" max="12" value="4" class="w-full h-2 bg-neutral-200 rounded-lg appearance-none cursor-pointer" id="usageSlider">
+                        <div class="text-sm text-neutral-600 text-center mt-2" id="usageValue">4 hours</div>
+                    </div>
+                    <div class="text-center p-6 bg-neutral-50 rounded-lg">
+                        <div class="stats-number" id="productivityGain">68%</div>
+                        <p class="text-neutral-600">potential productivity increase</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section id="github" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">Export to GitHub</h2>
+            <p class="text-xl text-neutral-600 mb-8">
+                Save your phubbing-free journey and share your progress with our GitHub integration.
+            </p>
+            
+            <div class="bg-neutral-50 rounded-xl p-8 mb-8">
+                <div class="flex items-center justify-center mb-6">
+                    <svg class="w-12 h-12 text-neutral-600 mr-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span class="text-2xl font-semibold">GitHub Integration</span>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 text-left">
+                    <div class="bg-white p-6 rounded-lg border border-neutral-200">
+                        <h4 class="font-semibold mb-3">Export Your Progress</h4>
+                        <p class="text-sm text-neutral-600 mb-4">Save your phubbing-free journey metrics and share your success with the community.</p>
+                        <button class="w-full bg-neutral-900 text-white py-3 px-4 rounded-lg font-semibold hover:bg-neutral-800 transition-colors">
+                            Export to GitHub
+                        </button>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg border border-neutral-200">
+                        <h4 class="font-semibold mb-3">Contribute Solutions</h4>
+                        <p class="text-sm text-neutral-600 mb-4">Share your own phubbing solutions and help others improve their digital wellness.</p>
+                        <button class="w-full border-2 border-neutral-300 text-neutral-700 py-3 px-4 rounded-lg font-semibold hover:border-neutral-400 transition-colors">
+                            Contribute Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-neutral-900 text-white rounded-xl p-8">
+                <h3 class="text-2xl font-bold mb-4">Ready to Start?</h3>
+                <p class="text-neutral-300 mb-6">Join thousands of professionals who have reclaimed their focus and productivity.</p>
+                <button class="bg-white text-neutral-900 px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">
+                    Get Started Today
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <span class="text-2xl font-bold">Phree</span>
+                    <p class="text-neutral-400 mt-4">Helping professionals overcome phubbing and maximize productivity since 2024.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-neutral-400">
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Research</a></li>
+                        <li><a href="#" class="hover:text-white">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Community</h4>
+                    <ul class="space-y-2 text-neutral-400">
+                        <li><a href="#" class="hover:text-white">GitHub</a></li>
+                        <li><a href="#" class="hover:text-white">Forum</a></li>
+                        <li><a href="#" class="hover:text-white">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-neutral-400">
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Support</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-neutral-800 mt-8 pt-8 text-center text-neutral-400">
+                <p>&copy; 2024 Phree. All rights reserved. Helping you stay focused in a distracted world.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Productivity calculator functionality
+        const usageSlider = document.getElementById('usageSlider');
+        const usageValue = document.getElementById('usageValue');
+        const productivityGain = document.getElementById('productivityGain');
+
+        usageSlider.addEventListener('input', function() {
+            const hours = this.value;
+            usageValue.textContent = `${hours} hours`;
+            
+            // Calculate productivity gain (more hours = more potential gain)
+            const gain = Math.min(85, Math.round((hours / 12) * 100 * 0.85));
+            productivityGain.textContent = `${gain}%`;
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // GitHub export simulation
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('GitHub')) {
+                button.addEventListener('click', function() {
+                    alert('GitHub export feature would connect to GitHub API to save your progress. This demo shows the interface design.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
